@@ -28,3 +28,6 @@ logs
 temp
 tmp
 tramp
+
+# Erlang files
+*.beam
