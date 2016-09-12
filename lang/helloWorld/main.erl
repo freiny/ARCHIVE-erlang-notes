@@ -1,9 +1,8 @@
 -module(main).
--export([init/0, out/1]).
+-export([init/0]).
 
-init() -> spawn(main, out, 123).
+init() ->
+	io:format("Hello World!~n"),
+	init:stop().
 
-out(N) ->
-	receive
-		io:format("Hello asdf World!~n").
-	end,
+% OUTPUT: Hello World!
