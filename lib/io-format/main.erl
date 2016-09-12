@@ -22,4 +22,7 @@ init() ->
 	io:format("~p ~p ~p ~n", ["h", "e", "y"]),
 	% OUTPUT: "h" "e" "y"
 
+	io:format("~p ~p ~p ~p ~n", ['a', "abc", 1, 2.0]),
+	% OUTPUT: a "abc" 1 2.0
+
 	init:stop().
