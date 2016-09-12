@@ -1,6 +1,8 @@
 -module(main).
 -export([init/0]).
 
+% Internally, Erlang uses 64-bit IEEE 754-1985 floats
+
 init() ->
 	io:format("~p~n",[14]),
 	% OUTPUT: 14
