@@ -20,4 +20,10 @@ init() ->
 	io:format("~p~n",[math:pow(3, 2)]),
 	% OUTPUT: 9.0
 
+	io:format("~p~n",[(2*3)+4]),
+	% OUTPUT: 10
+
+	io:format("~p~n",[2*(3+4)]),
+	% OUTPUT: 14
+
 	init:stop().
