@@ -22,7 +22,8 @@ init() ->
 	io:format("~p ~p ~p ~n", ["h", "e", "y"]),
 	% OUTPUT: "h" "e" "y"
 
-	io:format("~p ~p ~p ~p ~n", ['a', "abc", 1, 2.0]),
-	% OUTPUT: a "abc" 1 2.0
+	Sum = 2 + 3,
+	io:format("~p ~p ~p ~p ~p ~n", ['a', "abc", 1, 2.0, Sum]),
+	% OUTPUT: a "abc" 1 2.0 5
 
 	init:stop().
