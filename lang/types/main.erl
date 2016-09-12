@@ -10,8 +10,8 @@ init() ->
 	% file:line: Warning: no clause will ever match
 	% file:line: Warning: the guard for this clause evaluates to 'false'
 
-
-	% INTEGERS:
+	% ----------------------------------------------------------------
+	% INTEGERS
 	% Integer names must start with uppercase
 	A = 3,
 	B = 4,
@@ -20,7 +20,8 @@ init() ->
 	io:format("~p ~n", [Sum]),
 	% OUTPUT: 12
 
-	% ATOMS:
+	% ----------------------------------------------------------------
+	% ATOMS
 	% Atom names must start with lowercase
 	% Atoms are global and are similar to constants
 	% and enumerated types
@@ -33,5 +34,20 @@ init() ->
 	OptC = 'Option_3',
 	io:format("~p ~p ~p ~n", [OptA, OptB, OptC]),
 	% OUTPUT: option_1 option@2
+	% ----------------------------------------------------------------
+	% TUPLES
 
+	Cat = {"fifi", 4},
+	io:format("~p ~n", [Cat]),
+	% OUTPUT: {"fifi",4}
+
+	Dog = {dog, "fido", 2},
+	io:format("~p ~n",[Dog]),
+
+	Person = {person, {name, "Pat"}, {age, 25}},
+	io:format("~p ~n", [Person]),
+	% OUTPUT: {person,{name,"Pat"},{age,25}}
+
+
+	% ----------------------------------------------------------------
 	init:stop().
