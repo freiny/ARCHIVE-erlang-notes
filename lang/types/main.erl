@@ -103,19 +103,38 @@ init() ->
 	% "Fifi" is shorthand for a list of integers
 	CatName = "Fifi",
 	io:format("~p~n", [CatName]),
-	% OUTPUT: Fifi
+	% OUTPUT: "Fifi"
+
+	% Set format to display integer list
+	io:format("~w ~n", [CatName]),
+	% OUTPUT: [70,105,102,105]
 
 	% If all of the elements in the integer list are printable,
 	% then the shell prints the list as a string,
 	%
 	% Otherwise, it just prints it as a list of integers
 
-	CatNameList1 = [70,73,70,73],
-	CatNameList2 = [70,73,70,73,0],
+	CatNameList1 = [102,105,102,105],
+	CatNameList2 = [102,105,102,105,0],
 	% 0 represents Null in unicode and is non-printable
 
 	io:format("~p ~p ~n", [CatNameList1, CatNameList2]),
-	% OUTPUT: FIFI [70,73,70,73,0]
+	% OUTPUT: "FIFI" [102,105,102,105,0]
+
+	io:format("~p ~n", [ [$f,$i,$f,$i] ]),
+	% OUTPUT: "fifi"
+
+	io:format("~p ~n", [ [$f-32,$i,$f,$i] ]),
+	% OUTPUT: "Fifi"
+
+	io:format("~p ~n", [ [$f,$i,$f,$i,0] ]),
+	% OUTPUT: [102,105,102,105,0]
+
+	Str = "a\x{2260}b",
+	io:format("~p ~n", [Str]),
+	% OUTPUT: [97,8800,98]
+	io:format("~ts ~n", [Str]),
+	% OUTPUT: a≠b
 
 	% ----------------------------------------------------------------
 	init:stop().
