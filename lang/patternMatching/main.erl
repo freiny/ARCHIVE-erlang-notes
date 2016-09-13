@@ -25,4 +25,27 @@ init() ->
 	% file:line: Warning: no clause will ever match
 	% file:line: Warning: the guard for this clause evaluates to 'false'
 
+	IsDone = true,
+	% PASS: true
+
+	{num, Num} = {num, 4},
+	% PASS: {num,4}
+
+	{X1,X2,X3} = {dog, "fido", 3},
+	% PASS: {dog,"fido",3}
+
+	% {X4,X5} = {dog, "fido", 3},
+	% FAIL: SHELL_ERROR:
+	% ** exception error: no match of right hand side value {dog,"fido",3}
+
+	List = [A,B,C,D] = [1,2,3,4],
+	% PASS: [1,2,3,4]
+	io:format("~p ~p ~p ~p ~p ~n", [List, A, B, C, D]),
+	% OUTPUT: [1,2,3,4] 1 2 3 4
+
+	[First|Rest] = List,
+	% PASS: [1,2,3,4]
+	io:format("~p ~p ~n", [First, Rest]),
+	% OUTPUT: 1 [2,3,4]
+
 	init:stop().
