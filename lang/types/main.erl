@@ -59,7 +59,7 @@ init() ->
 	io:format("~p ~p ~p ~n",[NameTuple, AgeTuple, HairColorTuple]),
 	% OUTPUT: {name,"Pat"} {age,25} {haircolor,brown}
 
-	% Extract fields from person tuple
+	% Extract fields from nested person tuple
 	{person, {_, Name}, {_, Age}, {_, HairColor}} = Person,
 	io:format("~p ~p ~p ~n",[Name, Age, HairColor]),
 	% OUTPUT: "Pat" 25 brown
@@ -70,9 +70,25 @@ init() ->
 	io:format("~p~n",[List]),
 	% OUTPUT: [1,2,3]
 
-	Stuff = [1,'b',"c", {name,"Joe"}, [1,2,3]],
+	Stuff = [1,'b',"c", {name,"Joe"}, List, [4,5,6]],
 	io:format("~p~n",[Stuff]),
 	% OUTPUT: [1,b,"c",{name,"Joe"},[1,2,3]]
+
+	More = [4,5,6],
+	io:format("~p ~n",[ [1,2,3|More] ]),
+	% OUTPUT: [1,2,3,4,5,6]
+
+	BigList = [1,2,3,4,5,6,7,8],
+
+	% Extract first element from list
+	[BL1|BLMore] = BigList,
+	io:format("~p ~p ~n",[BL1, BLMore]),
+	% OUTPUT: 1 [2,3,4,5,6,7,8]
+
+	% Extract multiple elements from list
+	[BL2, BL3|BLTheRest] = BLMore,
+	io:format("~p ~p ~p ~n",[BL2, BL3, BLTheRest]),
+	% OUTPUT: 2 3 [4,5,6,7,8]
 
 	% ----------------------------------------------------------------
 	init:stop().
