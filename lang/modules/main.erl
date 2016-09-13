@@ -11,4 +11,11 @@ init() ->
 	% Shape:{square,4}
 	% AREA:16
 
+	Shape2 = {circle, 4},
+	Area2 = geometry:area(Shape2),
+	io:format("SHAPE:~p~nAREA:~p~n", [Shape2, Area2]),
+	% OUTPUT:
+	% Shape:{circle,4}
+	% AREA:50.24
+
 	init:stop().
