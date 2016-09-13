@@ -44,10 +44,25 @@ init() ->
 	Dog = {dog, "fido", 2},
 	io:format("~p ~n",[Dog]),
 
-	Person = {person, {name, "Pat"}, {age, 25}},
+	Person = {person, {name, "Pat"}, {age, 25}, {haircolor, brown}},
 	io:format("~p ~n", [Person]),
 	% OUTPUT: {person,{name,"Pat"},{age,25}}
 
+	First = {firstName, ann},
+	Last = {lastName, pan},
+	P = {person, First, Last},
+	io:format("~p ~n",[P]),
+	% OUTPUT: {person,{firstName,ann},{lastName,pan}}
+
+	% Extract fields from person tuple
+	{person, NameTuple, AgeTuple, HairColorTuple} = Person,
+	io:format("~p ~p ~p ~n",[NameTuple, AgeTuple, HairColorTuple]),
+	% OUTPUT: {name,"Pat"} {age,25} {haircolor,brown}
+
+	% Extract fields from person tuple
+	{person, {_, Name}, {_, Age}, {_, HairColor}} = Person,
+	io:format("~p ~p ~p ~n",[Name, Age, HairColor]),
+	% OUTPUT: "Pat" 25 brown
 
 	% ----------------------------------------------------------------
 	init:stop().
