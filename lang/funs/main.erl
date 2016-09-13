@@ -2,17 +2,22 @@
 -export([init/0]).
 
 init() ->
-	Dbl = fun(N) -> N * 2 end,
-	Sqr = fun(N) -> N * N end,
+	Dbl = fun(N) -> io:format("~p ~p ~n", [N, N * 2]) end,
+	Sqr = fun(N) -> io:format("~p ~p ~n", [N, N * N]) end,
 
-	io:format("~p~n", [Dbl(4)]),
-	% OUTPUT: 8
-	io:format("~p~n", [Dbl(5)]),
-	% OUTPUT: 10
-	io:format("~p~n", [Sqr(4)]),
-	% OUTPUT: 16
-	io:format("~p~n", [Sqr(5)]),
-	% OUTPUT: 25
+	lib:map(Dbl, [1,2,3,4]),
+	% OUTPUT:
+	% 1 2
+	% 2 4
+	% 3 6
+	% 4 8
+
+	lib:map(Sqr, [1,2,3,4]),
+	% OUTPUT:
+	% 1 1
+	% 2 4
+	% 3 9
+	% 4 16
 
 	% IsEven = fun(N) ->
 	% 	even(0) -> true;
