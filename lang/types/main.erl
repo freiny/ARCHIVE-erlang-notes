@@ -65,7 +65,8 @@ init() ->
 	% OUTPUT: "Pat" 25 brown
 
 	% ----------------------------------------------------------------
-	% LIST
+	% LISTS
+
 	List = [1,2,3],
 	io:format("~p~n",[List]),
 	% OUTPUT: [1,2,3]
@@ -89,6 +90,32 @@ init() ->
 	[BL2, BL3|BLTheRest] = BLMore,
 	io:format("~p ~p ~p ~n",[BL2, BL3, BLTheRest]),
 	% OUTPUT: 2 3 [4,5,6,7,8]
+
+	% ----------------------------------------------------------------
+	% STRINGS
+
+	% There are no strings in Erlang, but...
+	% we can represent strings by a list of integers or as a binary
+
+	% As a list of integers, each element in the list represents
+	% a Unicode codepoint
+
+	% "Fifi" is shorthand for a list of integers
+	CatName = "Fifi",
+	io:format("~p~n", [CatName]),
+	% OUTPUT: Fifi
+
+	% If all of the elements in the integer list are printable,
+	% then the shell prints the list as a string,
+	%
+	% Otherwise, it just prints it as a list of integers
+
+	CatNameList1 = [70,73,70,73],
+	CatNameList2 = [70,73,70,73,0],
+	% 0 represents Null in unicode and is non-printable
+
+	io:format("~p ~p ~n", [CatNameList1, CatNameList2]),
+	% OUTPUT: FIFI [70,73,70,73,0]
 
 	% ----------------------------------------------------------------
 	init:stop().
