@@ -2,12 +2,12 @@
 -export([init/0]).
 
 init() ->
-	Dbl = fun(N) -> N * 2 end,
-	Sqr = fun(N) -> N * N end,
 
+	Dbl = fun(N) -> N * 2 end,
 	io:format("~p~n", [ lists:map(Dbl,[1,2,3,4]) ]),
 	% OUTPUT: [2,4,6,8]
 
+	Sqr = fun(N) -> N * N end,
 	io:format("~p~n", [ lists:map(Sqr,[1,2,3,4]) ]),
 	% OUTPUT: [1,4,9,16]
 
@@ -23,13 +23,14 @@ init() ->
 		(fun(Name) -> io:format("~s ~p ~n",[Greeting, Name]) end) end,
 
 	DailyGreeting = Greeter("Hi!"),
-	NightGreeting = Greeter("Good Evening,"),
-	HolidayGreeting = Greeter("Merry Christmas,"),
-
 	DailyGreeting(ann),
 	% OUTPUT: Hi! ann
+
+	NightGreeting = Greeter("Good Evening,"),
 	NightGreeting(bob),
 	% OUTPUT: Good Evening, bob
+
+	HolidayGreeting = Greeter("Merry Christmas,"),
 	HolidayGreeting(cat),
 	% OUTPUT: Merry Christmas, cat
 
