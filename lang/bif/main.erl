@@ -1,8 +1,11 @@
 -module(main).
 -export([init/0]).
 
+% ----------------------------------------------------------------
 % BIF (Built In Functions)
+
 % Some functions would be too slow or not possible using Erlang
+% ----------------------------------------------------------------
 
 init() ->
 
