@@ -1,6 +1,25 @@
 -module(main).
 -export([init/0]).
 
+% ----------------------------------------------------------------
+% Operator	Description	Argument			Type
+% ----------------------------------------------------------------
+% +					Unary +										Number
+% -					Unary -										Number
+% +	 																	number
+% -	 																	Number
+% *	 																	Number
+% /					Floating point division		Number
+% bnot			Unary bitwise NOT					Integer
+% div				Integer division					Integer
+% rem				Integer remainder of X/Y	Integer
+% band			Bitwise AND								Integer
+% bor				Bitwise OR								Integer
+% bxor			Arithmetic bitwise XOR		Integer
+% bsl				Arithmetic bitshift left	Integer
+% bsr				Bitshift right						Integer
+% ----------------------------------------------------------------
+
 % Internally, Erlang uses 64-bit IEEE 754-1985 floats
 
 init() ->
