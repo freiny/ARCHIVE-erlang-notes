@@ -7,7 +7,9 @@
 % Cannot have user-defined functions in guards,
 % because it would allow for side-effects
 % ----------------------------------------------------------------
-
+% TODO:
+% or, orelse, and, andalso
+% ----------------------------------------------------------------
 
 init() ->
 
@@ -17,6 +19,13 @@ init() ->
 	Age2 = 17,
 	io:format("[BeerMe ~p] ~s~n", [Age2, beerMe(Age2)]),
 	% OUTPUT: [BeerMe 17] Not Today!
+
+	io:format("~p~n", [drinkSize(medium)]),
+	% OUTPUT: medium
+	io:format("~p~n", [drinkSize(large)]),
+	% OUTPUT: large
+	io:format("~p~n", [drinkSize(tiny)]),
+	% OUTPUT: unavailable
 
 	io:format("~p~n", [equip1(human)]),
 	% OUTPUT: {human,heavyWeapon}
@@ -36,6 +45,12 @@ init() ->
 
 beerMe(Age) when Age > 20 -> Age, "Have a beer!";
 beerMe(Age) -> Age, "Not Today!".
+
+drinkSize(Size) when Size =:= small -> Size, small;
+drinkSize(Size) when Size =:= medium -> Size, medium;
+drinkSize(Size) when Size =:= large -> Size, large;
+drinkSize(Size) when true -> Size, unavailable.
+% true guard is a catchall
 
 % must pass all
 equip1(Class) when Class =/= elf, Class =/= mage -> {Class, heavyWeapon};
