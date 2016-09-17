@@ -41,7 +41,7 @@ init() ->
 	print_record(Animal1),
 	% OUTPUT: I'm fido and I say "Ruff!"
 	print_record(Animal2),
-	% OUTPUT: I'm fido and I say "BARK!" 
+	% OUTPUT: I'm fido and I say "BARK!"
 
 	init:stop().
 

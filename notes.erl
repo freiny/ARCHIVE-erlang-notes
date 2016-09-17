@@ -47,4 +47,15 @@ someFunction() ->
 			action2
 	end,
 
-	% ---------------------------------------------------------------
+% ---------------------------------------------------------------
+% THINGS TO STUDY:
+
+% Erlang lets you define your own control structures
+% like for loops ...
+% using functions that return functions
+
+% Higher Order Functions
+% 	- reentrant parsing code
+% 	- parser combinators
+% 	- lazy evaluators
+% 	- lambda abstractions
