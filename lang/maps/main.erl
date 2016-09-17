@@ -25,6 +25,9 @@ init() ->
 	io:format("~p ~n",[Misc2]),
 	% OUTPUT: #{100 => "bottles of beer on the wall",erin => 29,{pat,32} => "Good Morning","hello" => world}
 
-
+	% Extracting field values with pattern matching
+	#{erin := Erin, "hello" := Hello} = Misc2,
+	io:format("~p ~p ~n",[Erin, Hello]),
+	% OUTPUT: 29 world
 
 	init:stop().
