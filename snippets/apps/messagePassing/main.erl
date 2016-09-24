@@ -7,4 +7,6 @@ init() ->
 
 	Node = node(),
 	Sub = spawn(Node, subscriber, init, [Self]),
-	Pub = spawn(Node, publisher, init, [Self]).
+	Pub = spawn(Node, publisher, init, [Self]),
+
+	Pub ! {Self, {subPid,Sub}}.
