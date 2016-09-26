@@ -18,10 +18,8 @@ init() ->
 
 	isTrue(true),
 	% OUTPUT: Is true
-	isTrue(false),
+	isTrue(false).
 	% OUTPUT: Is false
-
-	init:stop().
 
 isTrue(X) ->
 	case X of

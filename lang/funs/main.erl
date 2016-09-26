@@ -36,7 +36,5 @@ init() ->
 	% OUTPUT: Good Evening, bob
 
 	HolidayGreeting = Greeter("Merry Christmas,"),
-	HolidayGreeting(cat),
+	HolidayGreeting(cat).
 	% OUTPUT: Merry Christmas, cat
-
-	init:stop().

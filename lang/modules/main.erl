@@ -6,10 +6,8 @@ init() ->
 	% Calling functions from different modules
 	modA:init(),
 	modB:init(),
-	modC:init(),
+	modC:init().
 	% OUTPUT:
 	% modA running...
 	% modB running...
 	% modC running...
-
-	init:stop().

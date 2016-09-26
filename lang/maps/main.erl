@@ -27,7 +27,5 @@ init() ->
 
 	% Extracting field values with pattern matching
 	#{erin := Erin, "hello" := Hello} = Misc2,
-	io:format("~p ~p ~n",[Erin, Hello]),
+	io:format("~p ~p ~n",[Erin, Hello]).
 	% OUTPUT: 29 world
-
-	init:stop().

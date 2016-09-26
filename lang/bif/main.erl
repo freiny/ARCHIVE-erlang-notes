@@ -34,7 +34,5 @@ init() ->
 
 	N = 4,
 	IsIntList = [is_integer(3), is_integer(3.14), is_integer(N), is_integer(item)],
-	io:format("~p~n", [IsIntList] ),
+	io:format("~p~n", [IsIntList] ).
 	% OUTPUT: [true,false,true,false]
-
-	init:stop().

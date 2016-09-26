@@ -14,8 +14,6 @@ init() ->
 	% List is Empty
 
 	List = [1,2,3,4],
-	io:format("SUM(~p): ~p~n", [List, list:sum(List)]),
+	io:format("SUM(~p): ~p~n", [List, list:sum(List)]).
 	% OUTPUT:
 	% SUM([1,2,3,4]): 10
-
-	init:stop().

@@ -21,7 +21,7 @@ init() ->
 	io:format("~p: ~p~n",[milk, shop:cost(milk)]),
 	io:format("~p: ~p~n",[apples, shop:cost(apples)]),
 	io:format("~p: ~p~n",[bread, shop:cost(bread)]),
-	io:format("~p: ~p~n",[cereal, shop:cost(cereal)]),
+	io:format("~p: ~p~n",[cereal, shop:cost(cereal)]).
 	% OUTPUT:
 	% milk: 2.0
 	% apples: 4.5
@@ -31,5 +31,3 @@ init() ->
 	% shop:cost(none),
 	% SHELL_ERROR:
 	% ** exception error: no function clause matching shop:cost(none) (shop.erl, line 4)
-
-	init:stop().

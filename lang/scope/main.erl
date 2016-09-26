@@ -21,5 +21,4 @@ fn2() ->
 
 init() ->
 	fn1(),
-	fn2(),
-	init:stop().
+	fn2().

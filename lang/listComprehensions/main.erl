@@ -36,7 +36,5 @@ init() ->
 	%  OUTPUT: [{apple,20.0},{orange,0.25},{lime,0.15}]
 
 	L3 = [X || {ann, X} <- [{pat, cat}, {ann,25}, [ann, list], {bob,dog}, {ann,bird}, {joe, 33}, 8, ann, "hello"]],
-	io:format("~p~n",[L3]),
+	io:format("~p~n",[L3]).
 	%  OUTPUT: [25, bird]
-
-	init:stop().

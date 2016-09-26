@@ -35,8 +35,6 @@ init() ->
 	% PASS Pattern Match
 	% OUTPUT: [1,5,3,9]
 
-	io:format("~p~n",[ [W, _, Y, _]  = [1,0,3,7] ]),
+	io:format("~p~n",[ [W, _, Y, _]  = [1,0,3,7] ]).
 	% PASS Pattern Match
 	% OUTPUT: [1,0,3,7]
-
-	init:stop().

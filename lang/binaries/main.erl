@@ -13,7 +13,5 @@ init() ->
 	Bin1 = term_to_binary(hello),
 	io:format("~p ~p ~n", [Bin1, binary_to_term(Bin1)]),
 	% OUTPUT: <<131,100,0,5,104,101,108,108,111>> hello
-	io:format("~p ~n", [byte_size(Bin1)]),
+	io:format("~p ~n", [byte_size(Bin1)]).
 	% OUTPUT: 9
-
-	init:stop().

@@ -24,7 +24,5 @@ init() ->
 	% OUTPUT: <<103,214>>
 
 	<<Rx:5, Gx:6, Bx:5>> = RGB,
-	io:format("~p ~p ~p ~n", [Rx,Gx,Bx]),
+	io:format("~p ~p ~p ~n", [Rx,Gx,Bx]).
 	% OUTPUT: 12 62 22
-
-	init:stop().

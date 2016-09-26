@@ -133,8 +133,7 @@ init() ->
 	Str = "a\x{2260}b",
 	io:format("~p ~n", [Str]),
 	% OUTPUT: [97,8800,98]
-	io:format("~ts ~n", [Str]),
+	io:format("~ts ~n", [Str]).
 	% OUTPUT: a≠b
 
 	% ----------------------------------------------------------------
-	init:stop().

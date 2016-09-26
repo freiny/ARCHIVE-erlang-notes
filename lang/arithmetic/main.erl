@@ -47,7 +47,5 @@ init() ->
 	io:format("~p~n",[2*(3+4)]),
 	% OUTPUT: 14
 
-	io:format("~p ~p ~n", [7 div 3, 7 rem 3]),
+	io:format("~p ~p ~n", [7 div 3, 7 rem 3]).
 	% OUTPUT: 2 1
-
-	init:stop().

@@ -38,10 +38,8 @@ init() ->
 
 	io:format("~s ~n", [isFruit(lime)] ),
 	% OUTPUT: Nice Fruit!
-	io:format("~s ~n", [isFruit(cake)] ),
+	io:format("~s ~n", [isFruit(cake)] ).
 	% OUTPUT: That's not fruit
-
-	init:stop().
 
 beerMe(Age) when Age > 20 -> Age, "Have a beer!";
 beerMe(Age) -> Age, "Not Today!".

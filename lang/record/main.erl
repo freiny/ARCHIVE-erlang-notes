@@ -40,10 +40,8 @@ init() ->
 
 	print_record(Animal1),
 	% OUTPUT: I'm fido and I say "Ruff!"
-	print_record(Animal2),
+	print_record(Animal2).
 	% OUTPUT: I'm fido and I say "BARK!"
-
-	init:stop().
 
 print_record(#animal{name=Name, says=Says} = Record) ->
 	io:format("I'm ~p and I say ~p ~n", [Name,Says]).

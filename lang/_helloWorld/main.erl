@@ -2,7 +2,5 @@
 -export([init/0]).
 
 init() ->
-	io:format("Hello World!~n"),
-	init:stop().
-
-% OUTPUT: Hello World!
+	io:format("Hello World!~n").
+	% OUTPUT: Hello World!

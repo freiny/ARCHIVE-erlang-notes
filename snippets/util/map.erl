@@ -4,8 +4,7 @@
 init() ->
 
 	Dbl = fun(N) -> (N*2) end,
-	io:format("~p~n",[map(Dbl,[1,2,3,4])]),
-	init:stop().
+	io:format("~p~n",[map(Dbl,[1,2,3,4])]).
 
 map(Fn, []) -> [];
 map(Fn, [H|Rest]) ->

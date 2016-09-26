@@ -45,7 +45,5 @@ init() ->
 
 	[First|Rest] = List,
 	% PASS: [1,2,3,4]
-	io:format("~p ~p ~n", [First, Rest]),
+	io:format("~p ~p ~n", [First, Rest]).
 	% OUTPUT: 1 [2,3,4]
-
-	init:stop().

@@ -20,9 +20,5 @@ init() ->
 	% OUTPUT: [7,10]
 
 	Bin = << <<X>> || <<X:1>> <= B >>,
-	io:format("~p ~n", [Bin]),
+	io:format("~p ~n", [Bin]).
 	% OUTPUT: <<0,1,1,1,1,0,1,0>>
-
-
-
-	init:stop().

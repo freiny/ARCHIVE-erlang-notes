@@ -35,7 +35,7 @@ init() ->
 
 	%  number < atom < reference < fun < port < pid < tuple < map < nil < list < bit string
 	io:format("~s ~p ~n",['[a] > {a}', [a] > {a}]),
-	io:format("~s ~p ~n",['apple > (fun() -> apple end)', apple > (fun() -> apple end)]),
+	io:format("~s ~p ~n",['apple > (fun() -> apple end)', apple > (fun() -> apple end)]).
 
 	% OUTPUT:
 	% 2 == 2 true
@@ -52,5 +52,3 @@ init() ->
 	% apple > (fun() -> apple end) false
 
 	% ----------------------------------------------------------------
-
-	init:stop().
